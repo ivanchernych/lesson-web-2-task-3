@@ -2,10 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <title>{{ title }}</title>
+    <title>profession</title>
+    <link rel="stylesheet" href="/static/css/style.css">
     </head>
     <body>
         <h1>Миссия Колонизация Марса</h1>
         <h4>И на Марсе будут яблони цвести!</h4>
+
+        {% if 'инженер' in prof or 'строитель' in prof %}
+            <h2>Инженерные тренажеры</h2>
+            <img src="/static/img/1.jpg" width="450" height="450" alt="Картинка не найдена!">
+        {% else %}
+            <h2>Научные симуляторы</h2>
+            <img src="/static/img/2.jpg" width="450" height="450" alt="Картинка не найдена!">
+        {% endif %}
     </body>
 </html>
