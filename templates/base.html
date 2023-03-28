@@ -8,13 +8,19 @@
     <body>
         <h1>Миссия Колонизация Марса</h1>
         <h4>И на Марсе будут яблони цвести!</h4>
-
-        {% if 'инженер' in prof or 'строитель' in prof %}
-            <h2>Инженерные тренажеры</h2>
-            <img src="/static/img/1.jpg" width="450" height="450" alt="Картинка не найдена!">
+        <h2>Список профессий</h2>
+        {% if list == 'ol' %}
+                <ol>
+                    {% for item in prof %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ol>
         {% else %}
-            <h2>Научные симуляторы</h2>
-            <img src="/static/img/2.jpg" width="450" height="450" alt="Картинка не найдена!">
+            {% for item in prof %}
+                <ul>
+                    <li>{{ item }}</li>
+                </ul>
+            {% endfor %}
         {% endif %}
     </body>
 </html>
