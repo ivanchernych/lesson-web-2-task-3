@@ -10,17 +10,17 @@
         <h4>И на Марсе будут яблони цвести!</h4>
         <h2>Список профессий</h2>
         {% if list == 'ol' %}
-            {% for item in prof %}
                 <ol>
-                    <li>{{ item }}</li>
+                    {% for item in prof %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
                 </ol>
-            {% endfor %}
         {% else %}
-            {% for item in prof %}
                 <ul>
-                    <li>{{ item }}</li>
+                    {% for item in prof %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
                 </ul>
-            {% endfor %}
         {% endif %}
     </body>
 </html>
